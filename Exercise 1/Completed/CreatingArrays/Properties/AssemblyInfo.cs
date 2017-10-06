@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Hangman")]
+[assembly: AssemblyTitle("CreatingArrays")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Hangman")]
+[assembly: AssemblyProduct("CreatingArrays")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d391d6c9-4272-4fa7-8402-eb11f3b10b2a")]
+[assembly: Guid("6f51dd5b-c8c2-48a5-9aa4-78f207b5e247")]
 
 // Version information for an assembly consists of the following four values:
 //

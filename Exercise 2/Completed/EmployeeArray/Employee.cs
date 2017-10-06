@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListOfEmployees
+namespace EmployeeArray
 {
-    public class Employee
+    class Employee
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
