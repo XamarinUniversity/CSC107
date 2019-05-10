@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+    <title>Exercise 2: Create an array of Employees</title>
+    <link rel="stylesheet" type="text/css" href="./res/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./res/styles/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="./res/styles/styles.css">
+</head>
+
+<body>
+    <!-- Use the same title as the StartHere -->
+    <header>Learning C# with Xamarin: Collections</header>
+
+    <section id="main">
+
+        <h1 id="page-title"></h1>
+
+        <h2>Duration</h2>
+        <p>20 minutes</p>
+
+        <!-- - - - - - - - - Goals - - - - - - - - -->
+        <h2 id="goals">Lab goals</h2>
+        <p>
+            In this exercise, you will modify an existing console application by adding an employee array, populating the array with employees,
+            and then displaying the employee names. If you use the lab instructions, your display will look something like:
+        </p>
+        <img src="./res/images/completed-lab2.PNG" />
+
+        <p>
+            To complete this exercise, you will perform the following steps:
+        </p>
+        <ol>
+            <li>
+                Create a new class to model an employee, this will be a custom class named <code>Employee</code> that should have first and last name
+                properties.
+            </li>
+            <li>
+                Modify <b>Program.cs</b> code to create an array of <code>Employee</code> objects named <code>employeeArray</code>.
+            </li>
+            <li>
+                Populate the <code>employeeArray</code> with new employee objects.
+            </li>
+            <li>
+                Finally, display the <code>employeeArray</code> in the console using a for or foreach loop.
+            </li>
+            <li>
+                There are <code>TODO</code> comments in the code to direct your work, except for step 1 which requires you create a new class.
+            </li>
+        </ol>
+
+        <h2>Required Assets</h2>
+        <p>
+            The provided <strong>Resources</strong> folder for this part contains a subfolder named <strong>Start</strong> with a solution
+            you will use as starter code. The <strong>Completed</strong> subfolder contains a completed project you can use to check your work.
+        </p>
+
+        <!-- - - - - - - - - Steps - - - - - - - - -->
+        <h1>Steps</h1>
+        <p>
+            Try to use the picture and above steps to complete the lab exercise, referring to the slides if you need any help.
+            You can also use the following step-by-step instructions to fill in any knowledge gaps.
+            Make sure to use the starter project located in the <b>Resources/Start</b> folder.
+        </p>
+
+        <h2>Create an Employee class</h2>
+        <p>
+            First, you need to create a new employee class.
+        </p>
+        <ol>
+            <li>
+                Add a new class to the <b>EmployeeArray</b> project named <b>Employee.cs</b>.
+                Remember you do this using <b>File > New File..</b> or by right-clicking on the project and selecting <b>Add > New File</b>.
+            </li>
+
+            <li>
+                Select <b>Empty Class</b> from the templates (or just Class) and name it <b>Employee.cs</b>.
+            </li>
+
+            <li>
+                Add two public properties of type <code>string</code> to hold the <code>FirstName</code> and <code>LastName</code>.
+                You can delete the default constructor if you like - remember this is the constructor that takes no parameters,
+                it was added automatically in Visual Studio, but we don't need it here.
+            </li>
+            <p>
+                <a href="#" onclick="toggleCode(this,'employee');return false;" class="uiitem">Show Code</a>
+                <div class="indent-large" id="employee" style="display:none;">
+<pre class="prettyprint">
+namespace EmployeeArray
+{
+    public class Employee
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
+}
+</pre>
+                </div>
+            </p>
+        </ol>
+
+        <h2>Create the Employee Array</h2>
+        <p>
+            Now, you will add an array of <code>Employee</code> objects into the <b>Program.cs</b> file.
+        </p>
+        <ol>
+            <li>
+                Open the <b>Program.cs</b> file in the <b>EmployeeArray</b> project.
+                Notice that it has several <code>TODO</code> comments in the <code>Main</code> method, this is where you will place your work.
+            </li>
+
+            <li>
+                Locate the <code>TODO</code> related to creating the array. Use the same syntax you used in the first exercise, except this time you want an array
+                of <code>Employee</code> objects. Allocate an array of at least three (3) employees (feel free make the array larger if you would like to).
+            </li>
+            <p>
+                <a href="#" onclick="toggleCode(this,'create_array');return false;" class="uiitem">Show Code</a>
+                <div class="indent-large" id="create_array" style="display:none;">
+<pre class="prettyprint">
+// TODO: Create employeeArray
+Employee[] employeeArray = new Employee[3];
+</pre>
+                </div>
+            </p>
+        </ol>
+
+        <h2>Populate the employee array</h2>
+        <p>
+            Next, you will create a series of employee objects to fill in the array.
+        </p>
+        <ol>
+            <li>
+                Populate the array with three employees, you will need to assign each index (remember it starts with zero), and provide unique first and last
+                names for each created employee object. For example:
+            </li>
+<pre class="prettyprint codeblock">
+// TODO: Populate employeeArray with some data
+<span class="highlight">employeeArray[ 0 ] = new Employee { FirstName = "Jesse", LastName = "Liberty" };</span>
+ ...
+</pre>
+        </ol>
+
+        <h2>Display the employee array</h2>
+        <p>
+            Next, you will display the employees using the console
+        </p>
+        <ol>
+            <li>
+                Iterate over the employee array using a <code>for</code> or <code>foreach</code> loop and print each element to the console.
+            </li>
+            <p>
+            <a href="#" onclick="toggleCode(this,'display_array');return false;" class="uiitem">Show Code</a>
+            <div class="indent-large" id="display_array" style="display:none;">
+<pre class="prettyprint">
+// TODO: Display employeeArray
+for (int i = 0; i < employeeArray.Length; i++)
+{
+     Console.WriteLine(employeeArray[i]);
+}
+</pre>
+            </div>
+          </p>
+            <li>
+                Run the application to see the results.
+            </li>
+
+            <li>
+                Did it do what you expected? If you've followed along with the instructions here, it should look something like:
+            </li>
+            <img src="./res/images/lab2-almostdone.png" width="550" height="325"/>
+
+            <li>
+                This isn't displaying the values like it did before, and that's because C# doesn't know how to display an <code>Employee</code>
+                object - you have to tell it by adding another method named <code>ToString()</code>.
+            </li>
+
+            <li>
+                Open the <b>Employee.cs</b> file you created earlier. At the bottom of the class, add the following code to tell
+                C# how to display your employee:
+            </li>
+<pre class="prettyprint codeblock">
+public class Employee
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    <span class="highlight">public override string ToString ( )
+    {
+        return string.Format( "{0} {1}", FirstName, LastName );
+    }</span>
+}
+</pre>
+            <li>
+                Run the application again to see the difference - it should now be displaying your employee names correctly!
+            </li>
+        </ol>
+
+        <!-- - - - - - - - - Summary - - - - - - - - -->
+        <h1>Summary</h1>
+        <p>
+            In this lab exercise, you modified the EmployeeArray application by adding a new employee array,
+            populating the array with new employee data and then displaying that data.
+            Next you will define a List of employee objects and populate that list.
+        </p>
+
+        <div class="align-right">
+            <a href="../Start%20Here.html">Go Back</a>
+        </div>
+
+    </section>
+
+    <script src="./res/js/jquery.min.js"></script>
+    <script src="./res/js/prettify.js"></script>
+    <script src="./res/js/script.js"></script>
+
+    <footer>Copyright (C) 2018 Xamarin Inc., Microsoft.</footer>
+</body>
+</html>
