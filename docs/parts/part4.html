@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+    <title>Exercise 4: Create a Dictionary keyed by EmployeeID</title>
+    <link rel="stylesheet" type="text/css" href="./res/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./res/styles/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="./res/styles/styles.css">
+</head>
+
+<body>
+    <!-- Use the same title as the StartHere -->
+    <header>Learning C# with Xamarin: Collections</header>
+
+    <section id="main">
+
+        <h1 id="page-title"></h1>
+
+        <h2>Duration</h2>
+        <p>15 minutes</p>
+
+        <!-- - - - - - - - - Goals - - - - - - - - -->
+        <h2 id="goals">Lab goals</h2>
+        <p>
+            In this final exercise, you will create a dictionary that associates Employees with their integer IDs.
+            To complete the exercise, you will perform the following steps:
+        </p>
+        <ol>
+            <li>Create a <code>Dictionary</code> to map from <code>int</code> to <code>Employee</code>.</li>
+            <li>Add three employees using the IDs 101, 102 and 103 to the dictionary.</li>
+            <li>Pull each employee out of the dictionary by the ID.</li>
+            <li>Display each employee in the console.</li>
+        </ol>
+        <p>When your are finished, your application will look like:</p>
+        <img src="./res/images/completed-lab4.PNG" />
+
+        <h2>Required Assets</h2>
+        <p>
+            The provided <strong>Resources</strong> folder for this part contains a subfolder named <strong>Start</strong> with a solution
+            you will use as starter code. The <strong>Completed</strong> subfolder contains a completed project you can use to check your work.
+        </p>
+
+        <!-- - - - - - - - - Steps - - - - - - - - -->
+        <h1 id="steps">Steps</h1>
+        <p>
+            Try to use the picture and above steps to complete the lab exercise using the starter project, referring to the slides if you need
+            any help in creating the bank account application. You can also use the following step-by-step instructions to fill in any knowledge gaps.
+            There are <code>TODO</code> comment markers where you will add code.
+        </p>
+
+        <h2>Define a Dictionary to hold employees</h2>
+        <p>
+            You need to hold a group of employees and be able to look them up quickly using their employee ID.
+            While you could use a <code>List</code> or array, neither provides the "lookup by ID" feature so you would have to <em>search</em>
+            to find each employee which is inefficient. Instead, you will use a <code>Dictionary</code> which provides faster lookup without the need to search.
+        </p>
+
+        <ol>
+            <li>
+                Open the <b>EmployeeDictionary.sln</b> solution from the <b>Resources/Start</b> folder.
+                This project has the <code>Employee</code> definition.
+            </li>
+
+            <li>
+                Open the <b>Program.cs</b> file in the <b>EmployeeDictionary</b> project.
+                It has some existing code and a set of <code>TODO</code> comments where you will add some code.
+            </li>
+
+            <li>
+                After the first <code>TODO</code> comment, create a Dictionary that maps from <code>int</code> to <code>Employee</code>.
+                Remember this is defined as <code>Dictionary&lt;int,Employee&gt;</code>. Name it <code>employeeDictionary</code>.
+            </li>
+            <p>
+                <a href="#" onclick="toggleCode(this,'dictionary');return false;" class="uiitem">Show Code</a>
+                <div class="indent-large" id="dictionary" style="display:none;">
+<pre class="prettyprint">
+// TODO: create a Dictionary from int to Employee
+Dictionary&lt;int,Employee> employeeDictionary = new Dictionary&lt;int,Employee>();
+</pre>
+                </div>
+            </p>
+
+            <li>
+                Add three employees using the integer IDs 101, 102 and 103 to the dictionary, For example, here is one created and using the ID 101:
+            </li>
+<pre class="codeblock prettyprint">
+// TODO: Add an employee with an id of 101 to the dictionary
+employeeDictionary.Add( 101,
+  new Employee {
+      Id = 101,
+      FirstName = "Jesse",
+      LastName = "Liberty",
+  } );
+</pre>
+            <li>
+                Next, index into the dictionary using the Id to get each employee and then print them into the console.
+            </li>
+
+            <li>
+                Run the application to see the results!
+            </li>
+        </ol>
+        <img src="./res/images/completed-lab4.PNG" />
+        <!-- - - - - - - - - Summary - - - - - - - - -->
+        <h1>Summary</h1>
+        <p>
+            In this lab exercise, you created a dictionary mapping an integer ID to an employee object, added three employee,
+            and then printed them into the console.
+        </p>
+
+        <div class="align-right">
+            <a href="../Start%20Here.html">Go Back</a>
+        </div>
+
+    </section>
+
+    <script src="./res/js/jquery.min.js"></script>
+    <script src="./res/js/prettify.js"></script>
+    <script src="./res/js/script.js"></script>
+
+     <footer>Copyright (C) 2018 Xamarin Inc., Microsoft.</footer>
+</body>
+</html>

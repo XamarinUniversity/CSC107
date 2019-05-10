@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+    <title>Exercise 3: Create a List of Employees</title>
+    <link rel="stylesheet" type="text/css" href="./res/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./res/styles/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="./res/styles/styles.css">
+</head>
+
+<body>
+    <!-- Use the same title as the StartHere -->
+    <header>Learning C# with Xamarin: Collections</header>
+
+    <section id="main">
+
+        <h1 id="page-title"></h1>
+
+        <h2>Duration</h2>
+        <p>10 minutes</p>
+
+        <!-- - - - - - - - - Goals - - - - - - - - -->
+        <h2 id="goals">Lab goals</h2>
+        <p>
+            In this exercise, you will use a <code>List</code> to hold a group of employee objects and then display them in the console.
+            If you use the lab instructions, your display will look something like:
+        </p>
+        <img src="./res/images/completed-lab3.PNG" />
+
+        <p>To complete the exercise, you will perform the following steps: </p>
+        <ol>
+            <li>Create a new <code>List</code> to hold <code>Employee</code> objects.</li>
+            <li>Add some employees, populating them with a first and last name.</li>
+            <li>Display the list of employees inside the console</li>
+        </ol>
+
+        <h2>Required Assets</h2>
+        <p>
+            The provided <strong>Resources</strong> folder for this part contains a subfolder named <strong>Start</strong> with a solution
+            you will use as starter code. The <strong>Completed</strong> subfolder contains a completed project you can use to check your work.
+        </p>
+
+        <!-- - - - - - - - - Steps - - - - - - - - -->
+        <h1 id="steps">Steps</h1>
+        <p>
+            Try to use the picture and above steps to complete the lab exercise, referring to the slides if you need any help in creating the <code>List</code>.
+            You can also use the following step-by-step instructions to fill in any knowledge gaps.
+        </p>
+
+        <h2>Define a list of employees</h2>
+        <p>
+            This will be very similar to what you did in the last exercise, except you will use a <code>List</code> instead of the array.
+            The <code>Employee</code> class is already provided and it already has the <code>ToString</code> method you used last time.
+        </p>
+
+        <ol>
+            <li>
+                Open the <b>Program.cs</b> file in the <b>ListOfEmployees</b> project.
+                As before, it has several <code>TODO</code> comments where you will place your code.
+            </li>
+
+            <li>
+                As a first step, add a <code>List</code> to hold <code>Employee</code> objects. Remember this is defined as a <code>List&lt;Employee&gt;</code>.
+            </li>
+
+            <li>
+                Add a few employees to the list using the list's <code>Add</code> method. Provide some unique first and last names as you add them.
+            </li>
+
+            <li>
+                Finally, using a <code>for</code> or <code>foreach</code> loop, display the elements of the list into the console.
+            </li>
+            <p>
+                <a href="#" onclick="toggleCode(this,'employee');return false;" class="uiitem">Show Code</a>
+                <div class="indent-large" id="employee" style="display:none;">
+<pre class="prettyprint">
+// TODO: define a List of employee objects
+List&lt;Employee> employeeList = new List&lt;Employee>();
+// TODO: populate some employees into your list
+employeeList.Add(new Employee { FirstName = "Jesse", LastName = "Liberty" });
+employeeList.Add(new Employee { FirstName = "George", LastName = "Washington" });
+employeeList.Add(new Employee { FirstName = "Mark", LastName = "Smith" });
+// TODO: display the list
+for (int i = 0; i < employeeList.Count; i++)
+{
+     Console.WriteLine(employeeList[i]);
+}
+</pre>
+                </div>
+            </p>
+            <li>
+                Run the application to see the results - it should look <em>exactly</em> like the array version did, but now you can
+                add as many employees without redefining the size of the list.
+            </li>
+        </ol>
+
+        <!-- - - - - - - - - Summary - - - - - - - - -->
+        <h1>Summary</h1>
+        <p>
+            Congratulations! In this lab exercise, you modified the ListOfEmployees application by adding a list of employees.
+            Next you will create a Dictionary from int to Employee, add employee IDs to the
+            Dictionary and add text for the labels.
+        </p>
+
+        <div class="align-right">
+            <a href="../Start%20Here.html">Go Back</a>
+        </div>
+
+    </section>
+
+    <script src="./res/js/jquery.min.js"></script>
+    <script src="./res/js/prettify.js"></script>
+    <script src="./res/js/script.js"></script>
+
+     <footer>Copyright (C) 2018 Xamarin Inc., Microsoft.</footer>
+</body>
+</html>
